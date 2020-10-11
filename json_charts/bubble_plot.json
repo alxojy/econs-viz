@@ -30,13 +30,17 @@
     }
   }, {
     "mark": {
-      "type": "text", 
-      "style": "label",
-      "dx": -3,
-      "baseline": "middle",
-      "align": "left"
+      "type": "text"
     },
     "encoding": {
+      "y": {
+        "field": "Urban population (%)",
+        "type": "quantitative"
+      },
+      "x": {
+        "field": "GDP",
+        "type": "quantitative"
+      },
       "text": {"field": "Country", "type": "nominal"}
     }
   }],
