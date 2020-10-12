@@ -26,22 +26,13 @@
         "type": "quantitative",
         "scale": {"rangeMax": 1500, "rangeMin": 50}, 
         "legend": null
-      }
-    }
-  }, {
-    "mark": {
-      "type": "text"
-    },
-    "encoding": {
-      "y": {
-        "field": "Urban population (%)",
-        "type": "quantitative"
-      },
-      "x": {
-        "field": "GDP",
-        "type": "quantitative"
-      },
-      "text": {"field": "Country", "type": "nominal"}
+      }, 
+      "tooltip" : [
+        {"field": "Country", "type": "nominal"},
+        {"field": "GDP", "type": "quantitative"},
+        {"field": "Urban population (%)", "type": "quantitative"}, 
+        {"field": "Population", "type": "quantitative"}
+      ]
     }
   }],
   "transform": [
