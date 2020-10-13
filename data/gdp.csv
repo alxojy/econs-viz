@@ -242,15 +242,15 @@ Cape Verde,5625,2013
 Cape Verde,6353,2014
 Cape Verde,6358,2015
 Cape Verde,6512,2016
-Central African Republic,880,2008
-Central African Republic,849,2009
-Central African Republic,866,2010
-Central African Republic,909,2011
-Central African Republic,925,2012
-Central African Republic,581,2013
-Central African Republic,589,2014
-Central African Republic,605,2015
-Central African Republic,619,2016
+Central African Rep.,880,2008
+Central African Rep.,849,2009
+Central African Rep.,866,2010
+Central African Rep.,909,2011
+Central African Rep.,925,2012
+Central African Rep.,581,2013
+Central African Rep.,589,2014
+Central African Rep.,605,2015
+Central African Rep.,619,2016
 Chad,1605,2008
 Chad,1444,2009
 Chad,1764,2010
@@ -314,15 +314,15 @@ Costa Rica,12301,2013
 Costa Rica,13117,2014
 Costa Rica,13568,2015
 Costa Rica,13986,2016
-Cote d'Ivoire,2215,2008
-Cote d'Ivoire,2400,2009
-Cote d'Ivoire,2608,2010
-Cote d'Ivoire,2444,2011
-Cote d'Ivoire,2892,2012
-Cote d'Ivoire,3102,2013
-Cote d'Ivoire,3250,2014
-Cote d'Ivoire,3473,2015
-Cote d'Ivoire,3664,2016
+Côte d'Ivoire,2215,2008
+Côte d'Ivoire,2400,2009
+Côte d'Ivoire,2608,2010
+Côte d'Ivoire,2444,2011
+Côte d'Ivoire,2892,2012
+Côte d'Ivoire,3102,2013
+Côte d'Ivoire,3250,2014
+Côte d'Ivoire,3473,2015
+Côte d'Ivoire,3664,2016
 Croatia,20406,2008
 Croatia,19645,2009
 Croatia,18987,2010
@@ -367,15 +367,15 @@ Czechoslovakia,26784,2013
 Czechoslovakia,28205,2014
 Czechoslovakia,29361,2015
 Czechoslovakia,30118,2016
-Democratic Republic of Congo,608,2008
-Democratic Republic of Congo,615,2009
-Democratic Republic of Congo,647,2010
-Democratic Republic of Congo,681,2011
-Democratic Republic of Congo,710,2012
-Democratic Republic of Congo,751,2013
-Democratic Republic of Congo,802,2014
-Democratic Republic of Congo,836,2015
-Democratic Republic of Congo,836,2016
+Dem. Rep. Congo,608,2008
+Dem. Rep. Congo,615,2009
+Dem. Rep. Congo,647,2010
+Dem. Rep. Congo,681,2011
+Dem. Rep. Congo,710,2012
+Dem. Rep. Congo,751,2013
+Dem. Rep. Congo,802,2014
+Dem. Rep. Congo,836,2015
+Dem. Rep. Congo,836,2016
 Denmark,41520,2008
 Denmark,40629,2009
 Denmark,42474,2010
@@ -403,15 +403,15 @@ Dominica,9371,2013
 Dominica,9729,2014
 Dominica,9537,2015
 Dominica,9773,2016
-Dominican Republic,10224,2008
-Dominican Republic,10783,2009
-Dominican Republic,11524,2010
-Dominican Republic,11679,2011
-Dominican Republic,11936,2012
-Dominican Republic,12101,2013
-Dominican Republic,12657,2014
-Dominican Republic,13382,2015
-Dominican Republic,14088,2016
+Dominican Rep.,10224,2008
+Dominican Rep.,10783,2009
+Dominican Rep.,11524,2010
+Dominican Rep.,11679,2011
+Dominican Rep.,11936,2012
+Dominican Rep.,12101,2013
+Dominican Rep.,12657,2014
+Dominican Rep.,13382,2015
+Dominican Rep.,14088,2016
 East Asia,7257,2008
 East Asia,7510,2009
 East Asia,8283,2010
@@ -1589,3 +1589,93 @@ Zimbabwe,1801,2013
 Zimbabwe,1797,2014
 Zimbabwe,1759,2015
 Zimbabwe,1729,2016
+Greenland,0,2008
+Greenland,0,2009
+Greenland,0,2010
+Greenland,0,2011
+Greenland,0,2012
+Greenland,0,2013
+Greenland,0,2014
+Greenland,0,2015
+Greenland,0,2016
+Guyana,0,2008
+Guyana,0,2009
+Guyana,0,2010
+Guyana,0,2011
+Guyana,0,2012
+Guyana,0,2013
+Guyana,0,2014
+Guyana,0,2015
+Guyana,0,2016
+Fiji,0,2008
+Fiji,0,2009
+Fiji,0,2010
+Fiji,0,2011
+Fiji,0,2012
+Fiji,0,2013
+Fiji,0,2014
+Fiji,0,2015
+Fiji,0,2016
+Somaliland,0,2008
+Somaliland,0,2009
+Somaliland,0,2010
+Somaliland,0,2011
+Somaliland,0,2012
+Somaliland,0,2013
+Somaliland,0,2014
+Somaliland,0,2015
+Somaliland,0,2016
+W. Sahara,0,2008
+W. Sahara,0,2009
+W. Sahara,0,2010
+W. Sahara,0,2011
+W. Sahara,0,2012
+W. Sahara,0,2013
+W. Sahara,0,2014
+W. Sahara,0,2015
+W. Sahara,0,2016
+Somalia,0,2008
+Somalia,0,2009
+Somalia,0,2010
+Somalia,0,2011
+Somalia,0,2012
+Somalia,0,2013
+Somalia,0,2014
+Somalia,0,2015
+Somalia,0,2016
+Papua New Guinea,0,2008
+Papua New Guinea,0,2009
+Papua New Guinea,0,2010
+Papua New Guinea,0,2011
+Papua New Guinea,0,2012
+Papua New Guinea,0,2013
+Papua New Guinea,0,2014
+Papua New Guinea,0,2015
+Papua New Guinea,0,2016
+Suriname,0,2008
+Suriname,0,2009
+Suriname,0,2010
+Suriname,0,2011
+Suriname,0,2012
+Suriname,0,2013
+Suriname,0,2014
+Suriname,0,2015
+Suriname,0,2016
+Bahamas,0,2008
+Bahamas,0,2009
+Bahamas,0,2010
+Bahamas,0,2011
+Bahamas,0,2012
+Bahamas,0,2013
+Bahamas,0,2014
+Bahamas,0,2015
+Bahamas,0,2016
+Belize,0,2008
+Belize,0,2009
+Belize,0,2010
+Belize,0,2011
+Belize,0,2012
+Belize,0,2013
+Belize,0,2014
+Belize,0,2015
+Belize,0,2016
