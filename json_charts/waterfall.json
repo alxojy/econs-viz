@@ -34,7 +34,7 @@
             }
           }
         }, 
-        "transform": [{"filter": "datum.country == 'Afghanistan'"}]  
+        "transform": [{"filter": "datum.Country == 'Afghanistan'"}]  
       }, 
       {"mark": "text",
         "encoding": {
@@ -51,7 +51,7 @@
             "value": "#1B5E20"
           }
         }, 
-        "transform": [{"filter": "datum.country == 'Afghanistan'"}] 
+        "transform": [{"filter": "datum.Country == 'Afghanistan'"}] 
       }
     ],
     "config": {
