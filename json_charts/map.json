@@ -40,6 +40,11 @@
     ]
   },
   "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+  },
     "background": "#F2F3F4"
   }
 }
