@@ -59,6 +59,7 @@
         "baseline": "bottom",
         "align": "center",
         "fontWeight": "bold"      
-      }
+      },
+      "background": "#F2F3F4"  
     }   
   }
