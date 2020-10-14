@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "description": "Waterfall chart",
+    "width": 400,
+    "height": 250,
+    "padding": 5,
+    "data": {"url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
+    }, 
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "start",
+        "type": "quantitative",
+        "axis": {"title": "Life Satisfaction (Centril Ladder)"}
+      },
+      "y2": {
+        "field": "end", 
+        "type": "quantitative"
+      }
+    },      
+    "layer": [
+      {"mark": "bar",
+        "encoding": {
+          "color": {
+            "field": "cat",
+            "type": "ordinal",
+            "legend": {"title": ""},
+            "scale": {
+              "domain": ["increase","decrease"],
+              "range": ["#008080","#FF5252"]
+            }
+          }
+        }, 
+        "transform": [{"filter": "datum.country == 'Afghanistan'"}]  
+      }, 
+      {"mark": "text",
+        "encoding": {
+          "y": {
+            "field": "end", "type": "quantitative"          
+          },       
+          "text": {
+            "format": ".2f",
+            "condition": {"test": "datum['cat'] == 'total'", "field": "start"},
+            "field": "end", "type": "nominal"
+          },
+          "color": {
+            "condition": {"test": "datum['cat'] != 'increase'", "value": "black"},
+            "value": "#1B5E20"
+          }
+        }, 
+        "transform": [{"filter": "datum.country == 'Afghanistan'"}] 
+      }
+    ],
+    "config": {
+      "text": {
+        "baseline": "bottom",
+        "align": "center",
+        "fontWeight": "bold"      
+      }
+    }   
+  }
