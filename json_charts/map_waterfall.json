@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
   "description": "Waterfall chart",
@@ -6,7 +7,7 @@
     {
       "title": "GDP per capita",
       "width": 800,
-      "height": 500,
+      "height": 600,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
         "format": {
@@ -265,7 +266,7 @@
       }
     },
     "concat": {
-      "spacing": 50
+      "spacing": 30
     },
     "text": {
       "baseline": "bottom",
