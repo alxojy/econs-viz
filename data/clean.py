@@ -3,7 +3,7 @@ out = open('life_satisfaction.csv', 'w')
 prev = ''
 for i, line in enumerate(life):
     test  = line.split(',')
-    if 2005 < int(test[2].strip()) < 2017:
+    if 2007 < int(test[2].strip()) < 2017:
 
         if prev == '' or prev[0] != test[0]:
             print(prev, test)
