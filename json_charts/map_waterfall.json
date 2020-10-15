@@ -24,7 +24,7 @@
               "key": "Country",
               "fields": [
                 "GDP",
-                "Year", 
+                "Year",
                 "Country"
               ]
             }
@@ -34,56 +34,79 @@
             "as": "GDP"
           }
         ],
-        "selection": {
-          "country": {
-            "init" : {"Country": "Malaysia"},
-            "type": "single",
-            "fields": ["Country"],
-            "on": "click",
-            "resolve": "global",
-            "empty": "all"
-          }
-        },
-        "projection": {
-          "type": "equirectangular"
-        },
-        "mark": {
-          "type": "geoshape",
-          "stroke": "#757575",
-          "strokeWidth": 0.5
-        },
-        "encoding": {
-          "color": {
-            "condition": {
-              "test": "datum.GDP < 1",
-              "value": "#D3D3D3"
+        "layer": [
+          {
+            "selection": {
+              "country": {
+                "init": {
+                  "Country": "Malaysia"
+                },
+                "type": "single",
+                "fields": [
+                  "Country"
+                ],
+                "on": "click",
+                "resolve": "global",
+                "empty": "all"
+              }
             },
-            "field": "GDP",
-            "type": "quantitative",
-            "scale": {
-              "type": "bin-ordinal",
-              "domain": [
-                1000,
-                5000,
-                10000,
-                20000,
-                30000,
-                40000,
-                50000
+            "projection": {
+              "type": "equirectangular"
+            },
+            "mark": {
+              "type": "geoshape",
+              "stroke": "#757575",
+              "strokeWidth": 0.5
+            },
+            "encoding": {
+              "color": {
+                "condition": {
+                  "test": "datum.GDP < 1",
+                  "value": "#D3D3D3"
+                },
+                "field": "GDP",
+                "type": "quantitative",
+                "scale": {
+                  "type": "bin-ordinal",
+                  "domain": [
+                    1000,
+                    5000,
+                    10000,
+                    20000,
+                    30000,
+                    40000,
+                    50000
+                  ]
+                }
+              },
+              "tooltip": [
+                {
+                  "field": "Country",
+                  "type": "nominal"
+                },
+                {
+                  "field": "GDP",
+                  "type": "quantitative"
+                }
               ]
             }
           },
-          "tooltip": [
-            {
-              "field": "Country",
-              "type": "nominal"
+          {
+            "mark": {
+              "type": "text",
+              "dy": -235
             },
-            {
-              "field": "GDP",
-              "type": "quantitative"
+            "encoding": {
+              "text": {
+                "condition": {
+                  "selection": "country",
+                  "field": "Country",
+                  "type": "nominal"
+                }
+              }
             }
-          ]
-        }
+          }
+        ]
       },
       {
         "width": 300,
@@ -132,7 +155,9 @@
             },
             "transform": [
               {
-                "filter": {"selection": "country"}
+                "filter": {
+                  "selection": "country"
+                }
               }
             ]
           },
@@ -140,7 +165,12 @@
             "mark": "text",
             "encoding": {
               "y": {
-                "scale": {"domain": [0,10]},
+                "scale": {
+                  "domain": [
+                    0,
+                    10
+                  ]
+                },
                 "field": "end",
                 "type": "quantitative"
               },
@@ -163,7 +193,9 @@
             },
             "transform": [
               {
-                "filter": {"selection": "country"}
+                "filter": {
+                  "selection": "country"
+                }
               }
             ]
           }
@@ -171,7 +203,14 @@
       }
     ],
     "config": {
-      "concat": {"spacing": 50}, 
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      },
+      "concat": {
+        "spacing": 50
+      },
       "text": {
         "baseline": "bottom",
         "align": "center",
@@ -180,4 +219,3 @@
       "background": "#F2F3F4"
     }
   }
-  
