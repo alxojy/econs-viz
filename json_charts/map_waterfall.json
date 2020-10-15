@@ -1,0 +1,181 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "description": "Waterfall chart",
+    "padding": 5,
+    "hconcat": [
+      {
+        "width": 800,
+        "height": 500,
+        "data": {
+          "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
+          "format": {
+            "type": "topojson",
+            "feature": "ne_110m_admin_0_countries"
+          }
+        },
+        "transform": [
+          {
+            "lookup": "properties.NAME",
+            "from": {
+              "data": {
+                "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
+              },
+              "key": "Country",
+              "fields": [
+                "GDP",
+                "Year", 
+                "Country"
+              ]
+            }
+          },
+          {
+            "calculate": "datum.GDP-0",
+            "as": "GDP"
+          }
+        ],
+        "selection": {
+          "country": {
+            "init" : {"Country": "Malaysia"},
+            "type": "single",
+            "fields": ["Country"],
+            "on": "click",
+            "resolve": "global",
+            "empty": "all"
+          }
+        },
+        "projection": {
+          "type": "equirectangular"
+        },
+        "mark": {
+          "type": "geoshape",
+          "stroke": "#757575",
+          "strokeWidth": 0.5
+        },
+        "encoding": {
+          "color": {
+            "condition": {
+              "test": "datum.GDP < 1",
+              "value": "#D3D3D3"
+            },
+            "field": "GDP",
+            "type": "quantitative",
+            "scale": {
+              "type": "bin-ordinal",
+              "domain": [
+                1000,
+                5000,
+                10000,
+                20000,
+                30000,
+                40000,
+                50000
+              ]
+            }
+          },
+          "tooltip": [
+            {
+              "field": "Country",
+              "type": "nominal"
+            },
+            {
+              "field": "GDP",
+              "type": "quantitative"
+            }
+          ]
+        }
+      },
+      {
+        "width": 300,
+        "height": 200,
+        "data": {
+          "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
+        },
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "start",
+            "type": "quantitative",
+            "axis": {
+              "title": "Life Satisfaction (Centril Ladder)"
+            }
+          },
+          "y2": {
+            "field": "end",
+            "type": "quantitative"
+          }
+        },
+        "layer": [
+          {
+            "mark": "bar",
+            "encoding": {
+              "color": {
+                "field": "cat",
+                "type": "ordinal",
+                "legend": {
+                  "title": ""
+                },
+                "scale": {
+                  "domain": [
+                    "increase",
+                    "decrease"
+                  ],
+                  "range": [
+                    "#008080",
+                    "#FF5252"
+                  ]
+                }
+              }
+            },
+            "transform": [
+              {
+                "filter": {"selection": "country"}
+              }
+            ]
+          },
+          {
+            "mark": "text",
+            "encoding": {
+              "y": {
+                "scale": {"domain": [0,10]},
+                "field": "end",
+                "type": "quantitative"
+              },
+              "text": {
+                "format": ".2f",
+                "condition": {
+                  "test": "datum['cat'] == 'total'",
+                  "field": "start"
+                },
+                "field": "end",
+                "type": "nominal"
+              },
+              "color": {
+                "condition": {
+                  "test": "datum['cat'] != 'increase'",
+                  "value": "black"
+                },
+                "value": "#1B5E20"
+              }
+            },
+            "transform": [
+              {
+                "filter": {"selection": "country"}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "config": {
+      "text": {
+        "baseline": "bottom",
+        "align": "center",
+        "fontWeight": "bold"
+      },
+      "background": "#F2F3F4"
+    }
+  }
+  
