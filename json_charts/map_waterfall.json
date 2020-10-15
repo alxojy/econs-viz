@@ -3,11 +3,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
   "description": "Waterfall chart",
   "padding": 5,
-  "hconcat": [
+  "vconcat": [
     {
-      "title": "GDP per Capita",
-      "width": 800,
-      "height": 600,
+      "title": {"text":  "GDP per Capita"},
+      "width": "container",
+      "height": 330,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
         "format": {
@@ -68,7 +68,7 @@
               "field": "GDP",
               "type": "quantitative",
               "scale": {
-                "range": ["#f7fcfd","#ccece6","#66c2a4","#41ae76","#238b45","#006d2c","#00441b"],
+                "range": ["#ccece6","#99d8c9","#66c2a4","#41ae76","#238b45","#006d2c","#00441b"],
                 "type": "bin-ordinal",
                 "domain": [
                   1000,
@@ -96,8 +96,8 @@
         {
           "mark": {
             "type": "text",
-            "dy": -270,
             "fontSize": 16,
+            "dy": -200,
             "color": "#006d2c"
           },
           "encoding": {
@@ -113,9 +113,56 @@
       ]
     },
     {
-      "vconcat": [
-        {
-          "width": 290,
+      "hconcat": [
+        {"height": 140,
+        "width": 250,
+          "title": "GDP per year",
+          "data": {
+            "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
+          },
+          "transform": [
+            {
+              "filter": {
+                "selection": "country"
+              }
+            }
+          ],
+          "mark": {
+            "type": "area",
+            "line": {
+              "color": "#006d2c"
+            },
+            "color": {
+              "x1": 1,
+              "y1": 1,
+              "x2": 1,
+              "y2": 0,
+              "gradient": "linear",
+              "stops": [
+                {
+                  "offset": 0,
+                  "color": "white"
+                },
+                {
+                  "offset": 1,
+                  "color": "#006d2c"
+                }
+              ]
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "Year",
+              "type": "ordinal"
+            },
+            "y": {
+              "field": "GDP",
+              "type": "quantitative"
+            }
+          }
+        },
+        {"height": 150,
+        "width": 249,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
@@ -145,7 +192,8 @@
                   "field": "cat",
                   "type": "ordinal",
                   "legend": {
-                    "title": ""
+                    "title": "",
+                    "orient": "right"
                   },
                   "scale": {
                     "domain": [
@@ -206,92 +254,39 @@
               ]
             }
           ]
-        },
-        {
-          "width": 300,
-          "title": "GDP per year",
-          "data": {
-            "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
-          },
-          "transform": [
-            {
-              "filter": {
-                "selection": "country"
-              }
-            }
-          ],
-          "mark": {
-            "type": "area",
-            "line": {
-              "color": "#006d2c"
-            },
-            "color": {
-              "x1": 1,
-              "y1": 1,
-              "x2": 1,
-              "y2": 0,
-              "gradient": "linear",
-              "stops": [
-                {
-                  "offset": 0,
-                  "color": "white"
-                },
-                {
-                  "offset": 1,
-                  "color": "#006d2c"
-                }
-              ]
-            }
-          },
-          "encoding": {
-            "x": {
-              "field": "Year",
-              "type": "ordinal"
-            },
-            "y": {
-              "scale": {
-                "domain": [
-                  0,
-                  90000
-                ]
-              },
-              "field": "GDP",
-              "type": "quantitative"
-            }
-          }
         }
       ]
     }
   ],
   "config": {
-    "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+    "axis": {"labelFont": "Trebuchet MS", "titleFont": "Trebuchet MS",
     "labelFontSize": 12},
-  "header": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+  "header": {"labelFont": "Trebuchet MS", "titleFont": "Trebuchet MS",
     "labelFontSize": 12},
-  "mark": {"font": "Open Sans",
+  "mark": {"font": "Trebuchet MS",
     "fontSize": 12},
     "legend": {
-      "labelFont": "Open Sans"
+      "labelFont": "Trebuchet MS"
     },
     "title": {
-      "font": "Open Sans",
-      "fontSize": 18,
+      "font": "Trebuchet MS",
+      "fontSize": 16,
       "color": "#00441b"
+    },
+    "concat": {
+      "spacing":30
     },
     "style": {
       "cell": {
         "stroke": "transparent"
       }
     },
-    "concat": {
-      "spacing": 30
-    },
     "text": {
       "baseline": "bottom",
       "align": "center",
       "fontWeight": "bold",
-      "font": "Open Sans"
+      "font": "Trebuchet MS"
     },
-    "background": "#F2F3F4"
+    "background": "#eeeae4"
   }
 }
