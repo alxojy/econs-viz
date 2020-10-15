@@ -3,10 +3,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
   "description": "Waterfall chart",
   "padding": 5,
-  "vconcat": [
+  "hconcat": [
     {
       "title": {"text":  "GDP per Capita"},
-      "width": "container",
+      "width": 800,
       "height": 330,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "hconcat": [
+      "vconcat": [
         {"height": 140,
         "width": 250,
           "title": "GDP per year",
@@ -193,7 +193,7 @@
                   "type": "ordinal",
                   "legend": {
                     "title": "",
-                    "orient": "right"
+                    "orient": "bottom"
                   },
                   "scale": {
                     "domain": [
