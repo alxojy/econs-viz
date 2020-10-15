@@ -96,7 +96,7 @@
           "mark": {
             "type": "text",
             "fontSize": 16,
-            "dy": -200,
+            "dy": -180,
             "color": "#006d2c"
           },
           "encoding": {
@@ -114,7 +114,7 @@
     {
       "vconcat": [
         {"height": 130,
-        "width": 250,
+        "width": 270,
           "title": "GDP per year",
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
@@ -161,7 +161,7 @@
           }
         },
         {"height": 150,
-        "width": 249,
+        "width": 269,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
