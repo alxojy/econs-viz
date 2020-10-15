@@ -4,6 +4,7 @@
     "padding": 5,
     "hconcat": [
       {
+        "title": "GDP per capita",
         "width": 800,
         "height": 500,
         "data": {
@@ -170,6 +171,7 @@
       }
     ],
     "config": {
+      "concat": {"spacing": 50}, 
       "text": {
         "baseline": "bottom",
         "align": "center",
