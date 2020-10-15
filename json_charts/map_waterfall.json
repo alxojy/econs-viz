@@ -5,7 +5,7 @@
   "padding": 5,
   "hconcat": [
     {
-      "title": "GDP per capita",
+      "title": "GDP per Capita",
       "width": 800,
       "height": 600,
       "data": {
@@ -31,7 +31,7 @@
           }
         },
         {
-          "calculate": "datum.GDP-0",
+          "calculate": "datum.GDP",
           "as": "GDP"
         }
       ],
@@ -57,7 +57,7 @@
           "mark": {
             "type": "geoshape",
             "stroke": "#757575",
-            "strokeWidth": 0.5
+            "strokeWidth": 0.8
           },
           "encoding": {
             "color": {
@@ -68,6 +68,7 @@
               "field": "GDP",
               "type": "quantitative",
               "scale": {
+                "range": ["#f7fcfd","#ccece6","#66c2a4","#41ae76","#238b45","#006d2c","#00441b"],
                 "type": "bin-ordinal",
                 "domain": [
                   1000,
@@ -95,7 +96,9 @@
         {
           "mark": {
             "type": "text",
-            "dy": -235
+            "dy": -270,
+            "fontSize": 16,
+            "color": "#006d2c"
           },
           "encoding": {
             "text": {
@@ -116,6 +119,7 @@
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
+          "title": "Life Satisfaction per Country",
           "encoding": {
             "x": {
               "field": "Year",
@@ -149,8 +153,8 @@
                       "decrease"
                     ],
                     "range": [
-                      "#008080",
-                      "#FF5252"
+                      "#66c2a4",
+                      "#fc8d59"
                     ]
                   }
                 }
@@ -188,7 +192,7 @@
                 "color": {
                   "condition": {
                     "test": "datum['cat'] != 'increase'",
-                    "value": "black"
+                    "value": "#543005"
                   },
                   "value": "#1B5E20"
                 }
@@ -219,7 +223,7 @@
           "mark": {
             "type": "area",
             "line": {
-              "color": "darkblue"
+              "color": "#006d2c"
             },
             "color": {
               "x1": 1,
@@ -234,7 +238,7 @@
                 },
                 {
                   "offset": 1,
-                  "color": "darkblue"
+                  "color": "#006d2c"
                 }
               ]
             }
@@ -260,6 +264,20 @@
     }
   ],
   "config": {
+    "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+    "labelFontSize": 12},
+  "header": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+    "labelFontSize": 12},
+  "mark": {"font": "Open Sans",
+    "fontSize": 12},
+    "legend": {
+      "labelFont": "Open Sans"
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 18,
+      "color": "#00441b"
+    },
     "style": {
       "cell": {
         "stroke": "transparent"
@@ -271,7 +289,8 @@
     "text": {
       "baseline": "bottom",
       "align": "center",
-      "fontWeight": "bold"
+      "fontWeight": "bold",
+      "font": "Open Sans"
     },
     "background": "#F2F3F4"
   }
