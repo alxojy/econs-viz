@@ -1,13 +1,12 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "description": "Waterfall chart",
+  "description": "Interactive map, area line chart & waterfall chart",
   "padding": 5,
   "hconcat": [
     {
       "title": {"text":  ["GDP per Capita","__________________________________________________________________"]},
-      "width": 800,
-      "height": 330,
+      "width": 900,
+      "height": 450,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
         "format": {
@@ -101,7 +100,7 @@
           "mark": {
             "type": "text",
             "fontSize": 16,
-            "dy": -180,
+            "dy": -200,
             "color": "#006d2c"
           },
           "encoding": {
@@ -118,8 +117,8 @@
     },
     {
       "vconcat": [
-        {"height": 100,
-        "width": 250,
+        {"height": 120,
+        "width": 280,
           "title": {"text": ["GDP per year","___________________"], "offset": 10},
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
@@ -134,7 +133,7 @@
           "mark": {
             "type": "area",
             "line": {
-              "color": "#006d2c"
+              "color": "#fc8d59"
             },
             "color": {
               "x1": 1,
@@ -149,7 +148,7 @@
                 },
                 {
                   "offset": 1,
-                  "color": "#006d2c"
+                  "color": "#fc8d59"
                 }
               ]
             }
@@ -165,8 +164,8 @@
             }
           }
         },
-        {"height": 150,
-        "width": 249,
+        {"height": 140,
+        "width": 279,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
@@ -278,7 +277,7 @@
       "color": "#00441b"
     },
     "concat": {
-      "spacing":30
+      "spacing":20
     },
     "style": {
       "cell": {
