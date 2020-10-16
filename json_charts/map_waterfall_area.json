@@ -1,11 +1,12 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
   "description": "Waterfall chart",
   "padding": 5,
   "hconcat": [
     {
-      "title": {"text":  "GDP per Capita"},
-      "width": 900,
+      "title": {"text":  ["GDP per Capita","__________________________________________________________________"]},
+      "width": 800,
       "height": 330,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
@@ -38,16 +39,16 @@
         {
           "selection": {
             "country": {
+              "type": "multi",
               "init": {
-                "Country": "Malaysia"
+                "Country": "Russia"
               },
-              "type": "single",
               "fields": [
                 "Country"
               ],
               "on": "click",
               "resolve": "global",
-              "empty": "all"
+              "empty": "none"
             }
           },
           "projection": {
@@ -60,14 +61,18 @@
           },
           "encoding": {
             "color": {
-              "condition": {
+              "condition": [
+                {"selection": "country",
+                "value": "white"},
+                {
                 "test": "datum.GDP < 1",
                 "value": "#D3D3D3"
-              },
+                }
+              ],
               "field": "GDP",
               "type": "quantitative",
               "scale": {
-                "range": ["#ccece6","#99d8c9","#66c2a4","#41ae76","#238b45","#006d2c","#00441b"],
+                "range": ["#d6ffeb","#94d6b5","#7dc7a2","#4da87b","#2f9965","#14824d","#00441b"],
                 "type": "bin-ordinal",
                 "domain": [
                   1000,
@@ -113,9 +118,9 @@
     },
     {
       "vconcat": [
-        {"height": 130,
-        "width": 270,
-          "title": "GDP per year",
+        {"height": 100,
+        "width": 250,
+          "title": {"text": ["GDP per year","___________________"], "offset": 10},
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
           },
@@ -161,11 +166,11 @@
           }
         },
         {"height": 150,
-        "width": 269,
+        "width": 249,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
-          "title": "Life Satisfaction per Country",
+          "title": {"text": ["Life Satisfaction","___________________"]},
           "encoding": {
             "x": {
               "field": "Year",
@@ -258,17 +263,17 @@
     }
   ],
   "config": {
-    "axis": {"labelFont": "Trebuchet MS", "titleFont": "Trebuchet MS",
+    "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans",
     "labelFontSize": 12},
-  "header": {"labelFont": "Trebuchet MS", "titleFont": "Trebuchet MS",
+  "header": {"labelFont": "Open Sans", "titleFont": "Open Sans",
     "labelFontSize": 12},
-  "mark": {"font": "Trebuchet MS",
+  "mark": {"font": "Open Sans",
     "fontSize": 12},
     "legend": {
-      "labelFont": "Trebuchet MS"
+      "labelFont": "Open Sans"
     },
     "title": {
-      "font": "Trebuchet MS",
+      "font": "Open Sans",
       "fontSize": 16,
       "color": "#00441b"
     },
@@ -284,7 +289,7 @@
       "baseline": "bottom",
       "align": "center",
       "fontWeight": "bold",
-      "font": "Trebuchet MS"
+      "font": "Open Sans"
     },
     "background": "#eeeae4"
   }

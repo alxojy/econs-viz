@@ -3,6 +3,7 @@
   "description": "A bubbleplot showing countries, years, and urbanisation on continent.",
   "width": "container",
   "height": 300,
+  "title": ["Urban Population of Countries by GDP and Continent"],
   "data": {
     "url": "https://alxojy.github.io/econs-viz/data/urbanisation.csv"
   },
@@ -39,6 +40,36 @@
     {"filter": {"field":"Year", "equal": "2016"}}
   ],
   "config": {
-    "background": "#F2F3F4"
+
+    "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+      "labelFontSize": 12},
+    "header": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+      "labelFontSize": 12},
+    "mark": {"font": "Open Sans",
+      "fontSize": 12},
+      "legend": {
+        "labelFont": "Open Sans"
+      },
+      "title": {
+        "font": "Open Sans",
+        "fontSize": 16,
+        "color": "#00441b"
+      },
+      "concat": {
+        "spacing":30
+      },
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      },
+      "text": {
+        "baseline": "bottom",
+        "align": "center",
+        "fontWeight": "bold",
+        "font": "Open Sans"
+      },
+    "background": "#eeeae4"
   }
 }
+
