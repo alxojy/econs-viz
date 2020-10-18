@@ -1,0 +1,105 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "A Rectangular Unit-Chart",
+     "title": {"text": ["GDP Sector Composition","___________________"]},
+    "data": {
+      "values": [
+      {"id":1, "Sector":"Agriculture", "Percentage":6},
+      {"id":2, "Sector":"Agriculture", "Percentage":6}, 
+      {"id":3, "Sector":"Industrial", "Percentage":30}, 
+      {"id":4, "Sector":"Industrial", "Percentage":30}, 
+      {"id":5, "Sector":"Industrial", "Percentage":30}, 
+      {"id":6, "Sector":"Industrial", "Percentage":30}, 
+      {"id":7, "Sector":"Industrial", "Percentage":30}, 
+      {"id":8, "Sector":"Industrial", "Percentage":30}, 
+      {"id":9, "Sector":"Industrial", "Percentage":30}, 
+      {"id":10, "Sector":"Industrial", "Percentage":30}, 
+      {"id":11, "Sector":"Industrial", "Percentage":30}, 
+      {"id":12, "Sector":"Industrial", "Percentage":30}, 
+      {"id":13, "Sector":"Service", "Percentage":63}, 
+      {"id":14, "Sector":"Service", "Percentage":63}, 
+      {"id":15, "Sector":"Service", "Percentage":63}, 
+      {"id":16, "Sector":"Service", "Percentage":63}, 
+      {"id":17, "Sector":"Service", "Percentage":63}, 
+      {"id":18, "Sector":"Service", "Percentage":63}, 
+      {"id":19, "Sector":"Service", "Percentage":63}, 
+      {"id":20, "Sector":"Service", "Percentage":63}, 
+      {"id":21, "Sector":"Service", "Percentage":63}, 
+      {"id":22, "Sector":"Service", "Percentage":63}, 
+      {"id":23, "Sector":"Service", "Percentage":63}, 
+      {"id":24, "Sector":"Service", "Percentage":63}, 
+      {"id":25, "Sector":"Service", "Percentage":63}, 
+      {"id":26, "Sector":"Service", "Percentage":63}, 
+      {"id":27, "Sector":"Service", "Percentage":63}, 
+      {"id":28, "Sector":"Service", "Percentage":63}, 
+      {"id":29, "Sector":"Service", "Percentage":63}, 
+      {"id":30, "Sector":"Service", "Percentage":63}, 
+      {"id":31, "Sector":"Service", "Percentage":63}, 
+      {"id":32, "Sector":"Service", "Percentage":63}, 
+      {"id":33, "Sector":"Service", "Percentage":63}]},
+    "width": 300,
+    "height": 215,
+    "mark": "square",
+    "transform": [
+      {"calculate": "ceil(datum.id/ 5)", "as": "X"},
+      {"calculate": "datum.id - (datum.X - 1) *5", "as": "Y"}
+    ], 
+    "encoding": {
+      "x": {
+        "field": "X",
+        "type": "ordinal",
+        "axis": null
+      },
+      "y":{
+        "field": "Y",
+        "type": "ordinal",
+        "axis": null
+      },
+      "color":{
+        "field": "Sector",
+        "type": "nominal",
+        "scale": {"range":["#ffffff","#fc8d59","#7CC1BE"]},
+        "legend": {
+          "orient": "bottom"
+        }
+      },
+      "tooltip":[
+        {"field": "Sector",
+          "type": "nominal"},
+          {"field": "Percentage",
+          "type": "nominal",
+          "title":"Percentage of sector (%)"}]
+    },
+    "config":{
+      "square": {"size": 1400, "strokeWidth":2},
+      "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+      "labelFontSize": 12},
+    "header": {"labelFont": "Open Sans", "titleFont": "Open Sans",
+      "labelFontSize": 12},
+    "mark": {"font": "Open Sans",
+      "fontSize": 12},
+      "legend": {
+        "labelFont": "Open Sans"
+      },
+      "title": {
+        "font": "Open Sans",
+        "fontSize": 16,
+        "color": "#293E3A"
+      },
+      "concat": {
+        "spacing":20
+      },
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      },
+      "text": {
+        "baseline": "bottom",
+        "align": "center",
+        "fontWeight": "bold",
+        "font": "Open Sans"
+      },
+      "background": "#eeeae4"
+    }
+  }
