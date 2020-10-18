@@ -37,8 +37,8 @@
       {"id":31, "Sector":"Service", "Percentage":63}, 
       {"id":32, "Sector":"Service", "Percentage":63}, 
       {"id":33, "Sector":"Service", "Percentage":63}]},
-    "width": 300,
-    "height": 215,
+    "width": 320,
+    "height": 225,
     "mark": "square",
     "transform": [
       {"calculate": "ceil(datum.id/ 5)", "as": "X"},
