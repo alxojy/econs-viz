@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "description": "Interactive map, area line chart & waterfall chart",
+  "description": "Waterfall chart",
   "padding": 5,
   "hconcat": [
     {
@@ -55,8 +55,8 @@
           },
           "mark": {
             "type": "geoshape",
-            "stroke": "#757575",
-            "strokeWidth": 0.8
+            "stroke": "#003735",
+            "strokeWidth": 0.6
           },
           "encoding": {
             "color": {
@@ -71,7 +71,7 @@
               "field": "GDP",
               "type": "quantitative",
               "scale": {
-                "range": ["#d6ffeb","#94d6b5","#7dc7a2","#4da87b","#2f9965","#14824d","#00441b"],
+                "range": ["#9AEEE5","#8AD8D2","#7CC1BE","#70AFAD","#669F9D","#548482","#466F6E"],
                 "type": "bin-ordinal",
                 "domain": [
                   1000,
@@ -101,7 +101,7 @@
             "type": "text",
             "fontSize": 16,
             "dy": -200,
-            "color": "#006d2c"
+            "color": "#3F605A"
           },
           "encoding": {
             "text": {
@@ -204,7 +204,7 @@
                       "decrease"
                     ],
                     "range": [
-                      "#66c2a4",
+                      "#7CC1BE",
                       "#fc8d59"
                     ]
                   }
@@ -245,7 +245,7 @@
                     "test": "datum['cat'] != 'increase'",
                     "value": "#543005"
                   },
-                  "value": "#1B5E20"
+                  "value": "#466F6E"
                 }
               },
               "transform": [
@@ -274,7 +274,7 @@
     "title": {
       "font": "Open Sans",
       "fontSize": 16,
-      "color": "#00441b"
+      "color": "#293E3A"
     },
     "concat": {
       "spacing":20
