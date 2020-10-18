@@ -6,7 +6,7 @@
     {
       "title": {"text":  ["GDP per Capita","__________________________________________________________________"]},
       "width": 900,
-      "height": 480,
+      "height": 460,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
         "format": {
@@ -100,7 +100,7 @@
           "mark": {
             "type": "text",
             "fontSize": 16,
-            "dy": -220,
+            "dy": -200,
             "color": "#3F605A"
           },
           "encoding": {

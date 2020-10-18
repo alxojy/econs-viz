@@ -14,4 +14,4 @@ var inv = setInterval(function() {
         document.getElementById("counter").innerHTML = '$ ' + ++i + ' trillion USD';
     else
         clearInterval(inv);
-}, 1000 / 100);
+}, 2000 / 100);
