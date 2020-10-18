@@ -118,7 +118,7 @@
     {
       "vconcat": [
         {"height": 120,
-        "width": 280,
+        "width": 300,
           "title": {"text": ["GDP per year","___________________"], "offset": 10},
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
@@ -165,7 +165,7 @@
           }
         },
         {"height": 140,
-        "width": 279,
+        "width": 299,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
