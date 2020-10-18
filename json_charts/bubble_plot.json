@@ -3,7 +3,7 @@
   "description": "A bubbleplot showing countries, years, and urbanisation on continent.",
   "width": "container",
   "height": 300,
-  "title": ["Urban Population of Countries by GDP and Continent"],
+  "title": ["Urban Population of Countries by GDP and Continent","__________________________________________________________________"],
   "data": {
     "url": "https://alxojy.github.io/econs-viz/data/urbanisation.csv"
   },
