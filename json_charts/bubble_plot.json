@@ -1,43 +1,187 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A bubbleplot showing countries, years, and urbanisation on continent.",
   "width": "container",
   "height": 300,
   "title": ["Urbanization of Countries by GDP, Continent & Population Size","__________________________________________________________________"],
   "data": {
     "url": "https://alxojy.github.io/econs-viz/data/urbanisation.csv"
   },
-  "layer": [{
-    "mark": "circle",
-    "encoding": {
-      "x": {
-        "field": "GDP",
-        "type": "quantitative"
-      },
-      "y": {
-        "field": "Urban population (%)",
-        "type": "quantitative"
-      },
-      "color": {
-        "field": "Continent",
-        "type": "nominal"
-      }, 
-      "size": {
-        "field": "Population", 
-        "type": "quantitative",
-        "scale": {"rangeMax": 1500, "rangeMin": 50}, 
-        "legend": null
-      }, 
-      "tooltip" : [
-        {"field": "Country", "type": "nominal"},
-        {"field": "GDP", "type": "quantitative"},
-        {"field": "Urban population (%)", "type": "quantitative"}, 
-        {"field": "Population", "type": "quantitative"}
-      ]
+  "params": [
+    {
+      "name": "Year_slt",
+      "value": 2008,
+      "bind": {
+        "input": "range",
+        "min": 2008,
+        "max": 2016,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
     }
-  }],
+  ],
   "transform": [
-    {"filter": {"field":"Year", "equal": "2016"}}
+    {
+      "filter": "datum.Year == Year_slt"
+    },
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "GDP",
+      "type": "quantitative",
+      "title": "GDP"
+    },
+    "y": {
+      "field": "Urban population (%)",
+      "type": "quantitative"
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": [
+            "Continent"
+          ],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "scale": {
+            "rangeMax": 1500,
+            "rangeMin": 50
+          },
+          "field": "Population",
+          "type": "quantitative",
+          "legend": null
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#ff7f00",
+              "#e41a1c",
+              "#984ea3",
+              "#377eb8",
+              "#30d5c8",
+              "#8c510a"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "selection": "continent_highlight",
+            "value": 0.6
+          },
+          "value": 0.2
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Urban population (%)",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "GDP",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Population",
+            "type": "quantitative"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 10.5,
+        "dy":5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "field": "Country",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'Russia' || datum['Country'] == 'China' || datum['Country'] == 'Kuwait' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'India' || datum['Country'] == 'United States'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Urban population (%)",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "GDP",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Population",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
   ],
   "config": {
 
@@ -72,4 +216,3 @@
     "background": "#eeeae4"
   }
 }
-
