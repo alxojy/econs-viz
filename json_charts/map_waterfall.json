@@ -4,7 +4,12 @@
   "padding": 5,
   "hconcat": [
     {
-      "title": {"text":  ["GDP per Capita","__________________________________________________________________"]},
+      "title": {
+        "text": [
+          "GDP per Capita",
+          "__________________________________________________________________"
+        ]
+      },
       "width": 900,
       "height": 460,
       "data": {
@@ -48,6 +53,11 @@
               "on": "click",
               "resolve": "global",
               "empty": "none"
+            },
+            "highlight": {
+              "type": "single",
+              "empty": "none",
+              "on": "mouseover"
             }
           },
           "projection": {
@@ -55,23 +65,37 @@
           },
           "mark": {
             "type": "geoshape",
-            "stroke": "#003735",
-            "strokeWidth": 0.6
+            "strokeWidth": 0.6,
+            "stroke": "#003735"
           },
           "encoding": {
             "color": {
               "condition": [
-                {"selection": "country",
-                "value": "white"},
                 {
-                "test": "datum.GDP < 1",
-                "value": "#D3D3D3"
+                  "selection": "country",
+                  "value": "white"
+                },
+                {
+                  "test": "datum.GDP < 1",
+                  "value": "#D3D3D3"
+                },
+                {
+                  "selection": "highlight",
+                  "value": "white"
                 }
               ],
               "field": "GDP",
               "type": "quantitative",
               "scale": {
-                "range": ["#9AEEE5","#8AD8D2","#7CC1BE","#70AFAD","#669F9D","#548482","#466F6E"],
+                "range": [
+                  "#9AEEE5",
+                  "#8AD8D2",
+                  "#7CC1BE",
+                  "#70AFAD",
+                  "#669F9D",
+                  "#548482",
+                  "#466F6E"
+                ],
                 "type": "bin-ordinal",
                 "domain": [
                   1000,
@@ -117,9 +141,16 @@
     },
     {
       "vconcat": [
-        {"height": 120,
-        "width": 300,
-          "title": {"text": ["GDP per year","___________________"], "offset": 10},
+        {
+          "height": 120,
+          "width": 300,
+          "title": {
+            "text": [
+              "GDP per year",
+              "___________________"
+            ],
+            "offset": 10
+          },
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/gdp.csv"
           },
@@ -164,12 +195,18 @@
             }
           }
         },
-        {"height": 140,
-        "width": 299,
+        {
+          "height": 140,
+          "width": 299,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
-          "title": {"text": ["Life Satisfaction","___________________"]},
+          "title": {
+            "text": [
+              "Life Satisfaction",
+              "___________________"
+            ]
+          },
           "encoding": {
             "x": {
               "field": "Year",
@@ -262,12 +299,20 @@
     }
   ],
   "config": {
-    "axis": {"labelFont": "Open Sans", "titleFont": "Open Sans",
-    "labelFontSize": 12},
-  "header": {"labelFont": "Open Sans", "titleFont": "Open Sans",
-    "labelFontSize": 12},
-  "mark": {"font": "Open Sans",
-    "fontSize": 12},
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12
+    },
+    "header": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12
+    },
+    "mark": {
+      "font": "Open Sans",
+      "fontSize": 12
+    },
     "legend": {
       "labelFont": "Open Sans"
     },
@@ -277,7 +322,7 @@
       "color": "#293E3A"
     },
     "concat": {
-      "spacing":20
+      "spacing": 20
     },
     "style": {
       "cell": {
