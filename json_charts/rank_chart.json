@@ -16,7 +16,7 @@
       "mark": {"type": "line", "orient": "vertical"},
       "encoding": {
         "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Rank", "type": "ordinal"},
+        "y": {"field": "Rank", "type": "quantitative", "sort":"descending"},
         "color": {
           "field": "Country", "type": "nominal"
         }
@@ -25,7 +25,7 @@
     {"mark": {"type": "circle"},
     "encoding": {
         "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Rank", "type": "ordinal"},
+        "y": {"field": "Rank",  "type": "quantitative", "sort":"descending"},
         "size": {"value":1500},
         "color": {
           "field": "Country", "type": "nominal",
@@ -39,7 +39,7 @@
     {"mark": {"type": "text"},
     "encoding": {
         "x": {"field": "Year", "type": "ordinal"},
-        "y": {"field": "Rank", "type": "ordinal"},
+        "y": {"field": "Rank", "type": "quantitative", "sort":"descending"},
         "text": {"field": "Country", "type": "nominal"},
         "color": {"value":"black"},
         "tooltip": [
