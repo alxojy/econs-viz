@@ -1,0 +1,86 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": {
+          "text": [
+            "Top 10 Countries for GDP per Capita (2008 - 2016)",
+            "__________________________________________________________________"
+          ]
+        },
+    "width":"container",
+    "height":400,
+    "data": {
+      "url": "https://alxojy.github.io/econs-viz/data/gdptop10.csv"
+    },
+    "layer": [
+    {
+      "mark": {"type": "line", "orient": "vertical"},
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "Rank", "type": "ordinal"},
+        "color": {
+          "field": "Country", "type": "nominal"
+        }
+      }
+    },
+    {"mark": {"type": "circle"},
+    "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "Rank", "type": "ordinal"},
+        "size": {"value":1500},
+        "color": {
+          "field": "Country", "type": "nominal",
+          "scale": {
+            "domain": ["Qatar", "Kuwait", "UAE","Norway", "Luxembourg","Switzerland","Oman","Singapore","USA","Ireland", "Australia","Saudi Arabia","Netherlands","Hong Kong"],
+            "range": ["#88ef13", "#3fbea6","#009852","#8b6541","#b59762", "#c74e31","#94e8ed","#0f7de0","#808cdd","#f87f5f","#6e8796", "#fe9213","#70a37c","#cbdff3"]
+          }
+        }
+      }
+    },
+    {"mark": {"type": "text"},
+    "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "Rank", "type": "ordinal"},
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value":"black"}
+      }
+    }],
+    "config": {
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 12
+      },
+      "header": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 12
+      },
+      "mark": {
+        "font": "Open Sans",
+        "fontSize": 12
+      },
+      "legend": {
+        "labelFont": "Open Sans"
+      },
+      "title": {
+        "font": "Open Sans",
+        "fontSize": 16,
+        "color": "#293E3A"
+      },
+      "concat": {
+        "spacing": 20
+      },
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      },
+      "text": {
+        "baseline": "bottom",
+        "align": "center",
+        "fontWeight": "bold",
+        "font": "Open Sans"
+      },
+      "background": "#eeeae4"
+    }
+  }
