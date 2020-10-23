@@ -41,7 +41,17 @@
         "x": {"field": "Year", "type": "ordinal"},
         "y": {"field": "Rank", "type": "ordinal"},
         "text": {"field": "Country", "type": "nominal"},
-        "color": {"value":"black"}
+        "color": {"value":"black"},
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "GDP",
+            "type": "quantitative"
+          }
+        ]
       }
     }],
     "config": {
