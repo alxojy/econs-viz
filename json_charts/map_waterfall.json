@@ -10,8 +10,8 @@
           "__________________________________________________________________"
         ]
       },
-      "width": "container",
       "height": 460,
+      "width": 900,
       "data": {
         "url": "https://alxojy.github.io/econs-viz/data/world_map.json",
         "format": {
@@ -143,6 +143,7 @@
       "vconcat": [
         {
           "height": 120,
+          "width": 299,
           "title": {
             "text": [
               "GDP per year",
@@ -196,6 +197,7 @@
         },
         {
           "height": 140,
+          "width": 300,
           "data": {
             "url": "https://alxojy.github.io/econs-viz/data/life_satisfaction.csv"
           },
