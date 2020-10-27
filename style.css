@@ -53,6 +53,22 @@ p {
 	border-radius: 5px;
 }
 
+.border-9 {
+	width: 90% !important;
+	position: center;
+	margin: 0 auto;
+	background-color: #7CC1BE;
+}
+
+.border-9-white {
+	width: 90% !important;
+	position: center;
+	margin: 0 auto;
+	background-color: #e6e1dd;
+	height: 50px;
+	border-radius: 5px;
+}
+
 .rank-chart {
 	width: 95%;
 	align-content: center;

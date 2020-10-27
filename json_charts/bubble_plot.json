@@ -56,7 +56,15 @@
     "x": {
       "field": "GDP",
       "type": "quantitative",
-      "title": "GDP"
+      "title": "GDP (log scale)",
+      "scale": {
+        "type": "log",
+        "base":2.5
+      },
+      "axis": {
+        "format": ".0f",
+        "values":[1000,10000,50000,100000]
+      }
     },
     "y": {
       "field": "Urban population (%)",
@@ -155,7 +163,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Russia' || datum['Country'] == 'China' || datum['Country'] == 'Kuwait' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'India' || datum['Country'] == 'United States'",
+            "test": "datum['Country'] == 'Russia' || datum['Country'] == 'China' || datum['Country'] == 'Kuwait' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'India' || datum['Country'] == 'United States' || datum['Country'] == 'Cameroon' || datum['Country'] == 'Brazil'",
             "value": 1
           },
           "value": 0
