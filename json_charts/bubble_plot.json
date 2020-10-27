@@ -91,7 +91,7 @@
           },
           "field": "Population",
           "type": "quantitative",
-          "legend": null
+          "title": "Population Size"
         },
         "color": {
           "field": "Continent",
@@ -224,3 +224,4 @@
     "background": "#eeeae4"
   }
 }
+
