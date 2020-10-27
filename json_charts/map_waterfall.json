@@ -123,9 +123,9 @@
         {
           "mark": {
             "type": "text",
-            "fontSize": 16,
-            "dy": -200,
-            "color": "#3F605A"
+            "fontSize": 17,
+            "dy": -195,
+            "color": "#548482"
           },
           "encoding": {
             "text": {
