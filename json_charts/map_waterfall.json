@@ -259,12 +259,6 @@
               "mark": "text",
               "encoding": {
                 "y": {
-                  "scale": {
-                    "domain": [
-                      0,
-                      10
-                    ]
-                  },
                   "field": "end",
                   "type": "quantitative"
                 },
