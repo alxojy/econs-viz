@@ -1,4 +1,4 @@
-# FIT3179 Data Visualisation Assignment 2
+# FIT3179 Vega-Lite visualisation on the global economy
 
 Simple website to visualise the world economy (GDP) and its effects.  
   
