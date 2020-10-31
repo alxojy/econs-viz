@@ -8,6 +8,7 @@ h1 {
 }
 
 h4  {
+	font-size: 22px;
 	margin-top: 3px;
 	margin-bottom: 3px;
 }
@@ -24,6 +25,10 @@ h6 {
 
 p {
 	margin-top:0px;
+}
+
+.counter {
+	padding-top: 6px;
 }
 
 .bg-header {
