@@ -203,7 +203,7 @@
           },
           "title": {
             "text": [
-              "Life Satisfaction",
+              "Life Satisfaction per year",
               "___________________"
             ]
           },
@@ -294,24 +294,24 @@
   ],
   "config": {
     "axis": {
-      "labelFont": "Open Sans",
-      "titleFont": "Open Sans",
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
       "labelFontSize": 12
     },
     "header": {
-      "labelFont": "Open Sans",
-      "titleFont": "Open Sans",
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
       "labelFontSize": 12
     },
     "mark": {
-      "font": "Open Sans",
+      "font": "sans-serif",
       "fontSize": 12
     },
     "legend": {
-      "labelFont": "Open Sans"
+      "labelFont": "sans-serif"
     },
     "title": {
-      "font": "Open Sans",
+      "font": "sans-serif",
       "fontSize": 16,
       "color": "#293E3A"
     },
@@ -327,7 +327,7 @@
       "baseline": "bottom",
       "align": "center",
       "fontWeight": "bold",
-      "font": "Open Sans"
+      "font": "sans-serif"
     },
     "background": "#eeeae4"
   }

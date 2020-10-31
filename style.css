@@ -1,9 +1,10 @@
 body {
-	font-family: "Open Sans";
+	font-family: sans-serif;
 }
 
 h1 {
 	margin-bottom: 0px;
+	font-family: "Open Sans", Times, serif;
 }
 
 h4  {
@@ -13,9 +14,11 @@ h4  {
 
 h5 {
 	margin-bottom: 10px;
+	font-family: "Open Sans", Times, serif;
 }
 
 h6 {
+	font-size: 15px;
 	margin-bottom: 2px;
 }
 
@@ -45,6 +48,7 @@ p {
 }
 
 .border-white {
+	padding-top: 3px;
 	width: 80% !important;
 	position: center;
 	margin: 0 auto;
@@ -61,6 +65,7 @@ p {
 }
 
 .border-9-white {
+	padding-top: 3px;
 	width: 88% !important;
 	position: center;
 	margin: 0 auto;
@@ -77,6 +82,7 @@ p {
 }
 
 .border-10-white {
+	padding-top: 3px;
 	width: 91% !important;
 	position: center;
 	margin: 0 auto;
