@@ -4,5 +4,5 @@ Simple website to visualise the world economy (GDP) and its effects.
   
 <img src="econs-viz.png" width="55%"/>
   
-Built with JavaScript, Vega-Lite, HTML, BootStrap4.x <br>
+Built with Vega-Lite, HTML, CSS, BootStrap4.x, JavaScript <br>
 Website: https://alxojy.github.io/econs-viz/
